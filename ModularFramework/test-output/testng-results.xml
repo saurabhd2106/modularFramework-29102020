@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="2543" started-at="2020-10-29T07:13:05 UTC" finished-at="2020-10-29T07:13:07 UTC">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="2543" started-at="2020-10-29T07:13:05 UTC" finished-at="2020-10-29T07:13:07 UTC">
+      <class name="in.amazon.tests.DemoCommonDriver">
+        <test-method status="PASS" signature="verifyInvokeBrowser()[pri:0, instance:in.amazon.tests.DemoCommonDriver@9660f4e]" name="verifyInvokeBrowser" duration-ms="2503" started-at="2020-10-29T07:13:05 UTC" finished-at="2020-10-29T07:13:07 UTC">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInvokeBrowser -->
+      </class> <!-- in.amazon.tests.DemoCommonDriver -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
