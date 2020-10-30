@@ -19,7 +19,7 @@ public class CommonDriver implements Driver {
 
 	private int elementDetectionTimeout;
 
-	String hubUrl;
+	private String hubUrl;
 
 	public WebDriver getDriver() {
 		return driver;
