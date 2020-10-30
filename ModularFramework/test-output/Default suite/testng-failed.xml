@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="in.amazon.demo.DemoAmazonPomHomepage">
+      <class name="in.amazon.test.HomepageTests">
         <methods>
-          <include name="verifySearchOperation"/>
-          <include name="verifyInvokeBrowser"/>
-          <include name="closeBrowser"/>
+          <include name="setup"/>
+          <include name="verifySearchProduct"/>
+          <include name="cleanUp"/>
         </methods>
-      </class> <!-- in.amazon.demo.DemoAmazonPomHomepage -->
+      </class> <!-- in.amazon.test.HomepageTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

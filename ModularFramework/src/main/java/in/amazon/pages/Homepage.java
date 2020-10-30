@@ -9,8 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 import commonLibs.implementation.CommonElement;
 import commonLibs.implementation.DropdownControl;
 
-public class Homepage {
-	
+public class Homepage extends BasePage {
+
 	@CacheLookup
 	@FindBy(id = "twotabsearchtextbox")
 	private WebElement searchBox;
@@ -26,18 +26,12 @@ public class Homepage {
 	@FindBy(xpath = "//span[@data-component-type='s-result-info-bar']")
 	private WebElement results;
 
-	private CommonElement elementControl;
-
-	private DropdownControl dropdownControl;
-
 	public Homepage(WebDriver driver) {
 
+		super(driver);
+
 		PageFactory.initElements(driver, this);
-		
 
-		elementControl = new CommonElement();
-
-		dropdownControl = new DropdownControl();
 	}
 
 	public String searchProduct(String product, String category) throws Exception {
@@ -47,7 +41,7 @@ public class Homepage {
 		dropdownControl.selectViaVisibleText(searchDropdown, category);
 
 		elementControl.clickElement(searchButton);
-		
+
 		return elementControl.getText(results);
 
 	}
