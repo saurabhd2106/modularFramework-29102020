@@ -5,7 +5,9 @@
     <classes>
       <class name="in.amazon.test.HomepageTests">
         <methods>
+          <include name="postCLeanup"/>
           <include name="setup"/>
+          <include name="preSetup"/>
           <include name="verifySearchProduct"/>
           <include name="cleanUp"/>
         </methods>
