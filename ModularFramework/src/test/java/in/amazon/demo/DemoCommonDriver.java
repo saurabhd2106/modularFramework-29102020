@@ -1,4 +1,4 @@
-package in.amazon.tests;
+package in.amazon.demo;
 
 import org.testng.annotations.Test;
 

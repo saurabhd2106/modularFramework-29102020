@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="in.amazon.tests.DemoCommonDriver">
+      <class name="in.amazon.demo.DemoAmazonPomHomepage">
         <methods>
+          <include name="verifySearchOperation"/>
           <include name="verifyInvokeBrowser"/>
+          <include name="closeBrowser"/>
         </methods>
-      </class> <!-- in.amazon.tests.DemoCommonDriver -->
+      </class> <!-- in.amazon.demo.DemoAmazonPomHomepage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
