@@ -44,18 +44,18 @@ public class CommonDriver implements Driver {
 
 		if (browserType.equals("chrome")) {
 
-			System.setProperty("webdriver.chrome.driver", currentWorkingDirectory + "/drivers/chromedriver");
+			System.setProperty("webdriver.chrome.driver", currentWorkingDirectory + "/drivers/chromedriver.exe");
 
 			driver = new ChromeDriver();
 		} else if (browserType.equals("chrome-headless")) {
 
-			System.setProperty("webdriver.chrome.driver", currentWorkingDirectory + "/drivers/chromedriver");
+			System.setProperty("webdriver.chrome.driver", currentWorkingDirectory + "/drivers/chromedriver.exe");
 			ChromeOptions chromeOptions = new ChromeOptions();
 			chromeOptions.addArguments("--headless");
 			driver = new ChromeDriver(chromeOptions);
 		} else if (browserType.equals("firefox")) {
 
-			System.setProperty("webdriver.gecko.driver", currentWorkingDirectory + "/drivers/geckodriver");
+			System.setProperty("webdriver.gecko.driver", currentWorkingDirectory + "/drivers/geckodriver.exe");
 
 			driver = new ChromeDriver();
 		} else if (browserType.equals("chrome-remote")) {
@@ -78,6 +78,8 @@ public class CommonDriver implements Driver {
 			URL remoteAddress = new URL(hubUrl);
 
 			driver = new RemoteWebDriver(remoteAddress, firefoxOptions);
+		} else {
+			throw new Exception("Invalid Browser Type - "+ browserType);
 		}
 
 		driver.manage().deleteAllCookies();

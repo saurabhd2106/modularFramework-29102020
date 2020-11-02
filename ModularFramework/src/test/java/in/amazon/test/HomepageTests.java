@@ -1,30 +1,39 @@
 package in.amazon.test;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
 
-import org.testng.annotations.Test;
-
 public class HomepageTests extends BaseTest {
 
 	@Test
-	public void verifySearchProduct() throws Exception {
-		extentReportUtils.createATestcase("TC001 - Verify Search Product");
+	public void verifySearchProduct() {
+		try {
 
-		String product = "Apple Watch";
+			extentReportUtils.createATestcase("TC001 - Verify Search Product");
 
-		String category = "Electronics";
+			String product = "Apple Watch";
 
-		extentReportUtils.addLogStatus(Status.INFO, "Product searched - " + product);
+			String category = "Electronics";
 
-		extentReportUtils.addLogStatus(Status.INFO, "Category selected - " + category);
+			extentReportUtils.addLogStatus(Status.INFO, "Product searched - " + product);
 
-		String result = homepage.searchProduct(product, category);
+			extentReportUtils.addLogStatus(Status.INFO, "Category selected - " + category);
 
-		extentReportUtils.addLogStatus(Status.INFO, "Results - " + result);
+			String result = homepage.searchProduct(product, category);
 
-		System.out.println(result);
+			extentReportUtils.addLogStatus(Status.INFO, "Results - " + result);
+
+			String expectedResult = "1-24 of over 2,000 results for Electronics : \"Apple Watch\"";
+
+			Assert.assertEquals(result, expectedResult);
+
+		} catch (Exception e) {
+			
+			extentReportUtils.addLogStatus(Status.ERROR, e.getMessage());
+
+		}
 
 	}
 

@@ -2,32 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5301" started-at="2020-10-30T07:17:10 UTC" finished-at="2020-10-30T07:17:15 UTC">
+  <suite name="Default suite" duration-ms="1197" started-at="2020-11-02T11:50:11 IST" finished-at="2020-11-02T11:50:12 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5301" started-at="2020-10-30T07:17:10 UTC" finished-at="2020-10-30T07:17:15 UTC">
-      <class name="in.amazon.test.HomepageTests">
-        <test-method status="PASS" signature="preSetup()[pri:0, instance:in.amazon.test.HomepageTests@5f282abb]" name="preSetup" is-config="true" duration-ms="84" started-at="2020-10-30T07:17:09 UTC" finished-at="2020-10-30T07:17:10 UTC">
+    <test name="Default test" duration-ms="1197" started-at="2020-11-02T11:50:11 IST" finished-at="2020-11-02T11:50:12 IST">
+      <class name="in.amazon.demo.TestExcelDriver">
+        <test-method status="PASS" signature="verifyExcelDriver()[pri:0, instance:in.amazon.demo.TestExcelDriver@53f65459]" name="verifyExcelDriver" duration-ms="1137" started-at="2020-11-02T11:50:11 IST" finished-at="2020-11-02T11:50:12 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- preSetup -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:in.amazon.test.HomepageTests@5f282abb]" name="setup" is-config="true" duration-ms="3229" started-at="2020-10-30T07:17:10 UTC" finished-at="2020-10-30T07:17:13 UTC">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="verifySearchProduct()[pri:0, instance:in.amazon.test.HomepageTests@5f282abb]" name="verifySearchProduct" duration-ms="1978" started-at="2020-10-30T07:17:13 UTC" finished-at="2020-10-30T07:17:15 UTC">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySearchProduct -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:in.amazon.test.HomepageTests@5f282abb]" name="cleanUp" is-config="true" duration-ms="71" started-at="2020-10-30T07:17:15 UTC" finished-at="2020-10-30T07:17:15 UTC">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="postCLeanup()[pri:0, instance:in.amazon.test.HomepageTests@5f282abb]" name="postCLeanup" is-config="true" duration-ms="399" started-at="2020-10-30T07:17:15 UTC" finished-at="2020-10-30T07:17:15 UTC">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- postCLeanup -->
-      </class> <!-- in.amazon.test.HomepageTests -->
+        </test-method> <!-- verifyExcelDriver -->
+      </class> <!-- in.amazon.demo.TestExcelDriver -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
