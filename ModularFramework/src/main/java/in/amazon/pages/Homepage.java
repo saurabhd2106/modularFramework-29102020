@@ -36,6 +36,8 @@ public class Homepage extends BasePage {
 
 	public String searchProduct(String product, String category) throws Exception {
 
+		elementControl.clearText(searchBox);
+		
 		elementControl.setText(searchBox, product);
 
 		dropdownControl.selectViaVisibleText(searchDropdown, category);

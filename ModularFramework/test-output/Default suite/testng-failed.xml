@@ -9,8 +9,7 @@
           <include name="postCLeanup"/>
           <include name="setup"/>
           <include name="preSetup"/>
-          <include name="verifySearchProduct"/>
-          <include name="cleanUp"/>
+          <include name="verifySearchProduct" invocation-numbers="0 1 2"/>
         </methods>
       </class> <!-- in.amazon.test.HomepageTests -->
     </classes>
