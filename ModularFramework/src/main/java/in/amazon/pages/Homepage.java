@@ -6,9 +6,6 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import commonLibs.implementation.CommonElement;
-import commonLibs.implementation.DropdownControl;
-
 public class Homepage extends BasePage {
 
 	@CacheLookup
@@ -37,7 +34,7 @@ public class Homepage extends BasePage {
 	public String searchProduct(String product, String category) throws Exception {
 
 		elementControl.clearText(searchBox);
-		
+
 		elementControl.setText(searchBox, product);
 
 		dropdownControl.selectViaVisibleText(searchDropdown, category);

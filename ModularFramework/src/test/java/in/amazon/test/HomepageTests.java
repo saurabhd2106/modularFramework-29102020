@@ -5,11 +5,11 @@ import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
 
-import utils.TestDataSource;
+import utils.TestDataSourceFromDatabase;
 
 public class HomepageTests extends BaseTest {
 
-	@Test(dataProvider = "getDataforSearchProduct", dataProviderClass = TestDataSource.class)
+	@Test(dataProvider = "getDataForSearchProduct", dataProviderClass = TestDataSourceFromDatabase.class)
 	public void verifySearchProduct(String product, String category) throws Exception {
 		extentReportUtils.createATestcase("TC001 - Verify Search Product");
 

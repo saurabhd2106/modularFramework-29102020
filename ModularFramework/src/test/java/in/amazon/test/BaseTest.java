@@ -119,8 +119,10 @@ public class BaseTest {
 		String browserType = configPropeties.getProperty("browserType");
 
 		String url = configPropeties.getProperty("baseUrl");
+		
+		String env = configPropeties.getProperty("env");
 
-		cmnDriver = new CommonDriver(browserType);
+		cmnDriver = new CommonDriver(browserType, env);
 
 		extentReportUtils.addLogStatus(Status.INFO, "Browser invoked is - " + browserType);
 

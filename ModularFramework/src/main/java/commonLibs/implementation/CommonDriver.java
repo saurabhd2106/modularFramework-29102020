@@ -35,17 +35,34 @@ public class CommonDriver implements Driver {
 		this.elementDetectionTimeout = elementDetectionTimeout;
 	}
 
+	public CommonDriver(String browserType, String env) throws Exception {
+
+		initialSetup(browserType, env);
+
+	}
+
 	public CommonDriver(String browserType) throws Exception {
 
+		initialSetup(browserType, "linux");
+
+	}
+
+	private void initialSetup(String browserType, String env) throws Exception {
 		pageloadTimeout = 60;
 		elementDetectionTimeout = 10;
 
 		currentWorkingDirectory = System.getProperty("user.dir");
 
 		if (browserType.equals("chrome")) {
+			if (env.equals("linux")) {
 
-			System.setProperty("webdriver.chrome.driver", currentWorkingDirectory + "/drivers/chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", currentWorkingDirectory + "/drivers/chromedriver");
 
+			} else if (env.equals("windows")) {
+
+				System.setProperty("webdriver.chrome.driver", currentWorkingDirectory + "/drivers/chromedriver.exe");
+
+			}
 			driver = new ChromeDriver();
 		} else if (browserType.equals("chrome-headless")) {
 
@@ -79,13 +96,12 @@ public class CommonDriver implements Driver {
 
 			driver = new RemoteWebDriver(remoteAddress, firefoxOptions);
 		} else {
-			throw new Exception("Invalid Browser Type - "+ browserType);
+			throw new Exception("Invalid Browser Type - " + browserType);
 		}
 
 		driver.manage().deleteAllCookies();
 
 		driver.manage().window().maximize();
-
 	}
 
 	@Override
