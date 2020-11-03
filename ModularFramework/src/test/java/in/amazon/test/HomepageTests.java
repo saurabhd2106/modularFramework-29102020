@@ -10,7 +10,7 @@ import utils.TestDataSourceFromDatabase;
 
 public class HomepageTests extends BaseTest {
 
-	@Test(dataProvider = "getDataForSearchProduct", dataProviderClass = TestDataSource.class)
+	@Test(dataProvider = "getDataforSearchProduct", dataProviderClass = TestDataSource.class)
 	public void verifySearchProduct(String product, String category) throws Exception {
 		extentReportUtils.createATestcase("TC001 - Verify Search Product");
 
